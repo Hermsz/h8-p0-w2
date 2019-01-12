@@ -1,6 +1,6 @@
 
 
-var nama = "Setan"
+var nama = " "
 var peran = " "
 
 
