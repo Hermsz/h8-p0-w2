@@ -1,26 +1,30 @@
 
-var menit = 500
-var hasilmod = menit % 60
-if(hasilmod < 10) {
-    console.log((Math.floor(menit/60)) + ":" + "0" + hasilmod)
-} else {
-    console.log((Math.floor(menit/60)) + ":" + hasilmod )
-}
 
-console.log("----Vita Answer to Konversi Menit----")
+/*
+//Logic Challenge - Konversi Menit
+
+Problem
+Diberikan sebuah function konversiMenit(menit) yang menerima satu parameter berupa angka yang merupakan ukuran waktu dalam menit. Function akan me-return string waktu dalam format jam:menit berdasarkan menit tersebut. Contoh, jika menit adalah 63, maka function akan me-return "1:03".
+
+*/
 
 function konversiMenit(menit) {
 
-    hasilMod = menit%60
-    hasilBagi = Math.floor(menit/60)
-    
-    if (hasilMod < 10){
-      hasilMod = '0' + hasilMod
-     
+    var hasilMod = menit % 60
+
+    if(hasilMod < 10) {
+        return Math.floor(menit/60) + ":" + "0" + hasilMod
+    } else {
+        return Math.floor(menit/60) + ":" + hasilMod
     }
-    
-     return (hasilBagi + ':' + hasilMod ) //jangan salah!!//
-     //kalo returnya didalam if berarti pas else > 10 ngga ada
-     //jadi nya hasilnya undefined!!
+
 }
-console.log(konversiMenit(500))
+
+// TEST CASES
+console.log(konversiMenit(63)); // 1:03
+console.log(konversiMenit(124)); // 2:04
+console.log(konversiMenit(53)); // 0:53
+console.log(konversiMenit(88)); // 1:28
+console.log(konversiMenit(120)); // 2:00
+
+
